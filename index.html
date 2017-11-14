@@ -1,0 +1,125 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Vehicle GeoLocation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+
+        function initialize() {
+
+            var locations = [
+                ['CR2863', 29.291605, -100.969480, 'A', '000000000016001130', 'MX-TRAFFILOG', '008000'], ['CR4292', 25.713536, -100.295656, 'B', '000000000016007350', 'MX-TRAFFILOG', 'ff0000'],
+                ['', 0.0, 0.0, '', '', '']
+            ];
+
+            //Styles Start optional
+            var styles = [{ "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "color": "#444444" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "poi", "elementType": "geometry.fill", "stylers": [{ "saturation": "-100" }, { "lightness": "57" }] }, { "featureType": "poi", "elementType": "geometry.stroke", "stylers": [{ "lightness": "1" }] }, { "featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit.station.bus", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.station.bus", "elementType": "labels.text.fill", "stylers": [{ "saturation": "0" }, { "lightness": "0" }, { "gamma": "1.00" }, { "weight": "1" }] }, { "featureType": "transit.station.bus", "elementType": "labels.icon", "stylers": [{ "saturation": "-100" }, { "weight": "1" }, { "lightness": "0" }] }, { "featureType": "transit.station.rail", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "transit.station.rail", "elementType": "labels.text.fill", "stylers": [{ "gamma": "1" }, { "lightness": "40" }] }, { "featureType": "transit.station.rail", "elementType": "labels.icon", "stylers": [{ "saturation": "-100" }, { "lightness": "30" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#d2d2d2" }, { "visibility": "on" }] }];
+            var styledMap = new google.maps.StyledMapType(styles, { name: "Styled Map" });
+
+
+
+            var mapProp = {
+                center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+                zoom: 5,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            //Set the map to use the styled map optional
+            //map.mapTypes.set('map_style', styledMap);
+            //map.setMapTypeId('map_style');
+
+            var trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(map);
+
+            var markerIcon = {
+                url: "https://image.flaticon.com/icons/png/128/296/296842.png",
+                scaledSize: new google.maps.Size(30, 30),
+                origin: new google.maps.Point(0, 0),
+                //anchor: new google.maps.Point(0,0),
+                //labelOrigin: new google.maps.Point(100,10)
+            };
+
+            //Create a marker pin to add to the map
+            var marker;
+
+            for (i = 0; i < locations.length - 1; i++) {
+                marker = new MarkerWithLabel({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map,
+                    title: locations[i][0],
+                    icon: markerIcon,
+
+                    //icon: "http://www.codeshare.co.uk/images/blue-pin.png",
+                    animation: google.maps.Animation.DROP,
+                    labelContent: locations[i][0],
+                    labelAnchor: new google.maps.Point(18, 0),
+                    labelClass: "labels", // the CSS class for the label
+                    labelStyle: { opacity: 0.75, background: "#" + locations[i][6] }
+                });
+
+                var iw = new google.maps.InfoWindow({
+                    content: '<div id="google-popup">' +
+                        '<div id="title">' + locations[i][0] + ' <div class="close"></div></div>' +
+                        '<div id="content">' +
+                        '<table class="table-condensed">  ' +
+                        '<tbody>' +
+                        '<tr>' +
+                        '<td class="subtitle">Carga:</td>' +
+                        '<td>MX-PD-029 SALTILLO 1 PERF</td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td class="subtitle">Obra:</td>' +
+                        '<td>Moe</td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td class="subtitle">Chofer:</td>' +
+                        '<td>Dooley</td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td class="subtitle">Ticket:</td>' +
+                        '<td>Dooley</td>' +
+                        '</tr>' +
+                        '<tr>' +
+                        '<td class="subtitle">TEA:</td>' +
+                        '<td>adsd</td>' +
+                        '</tr>' +
+                        '</tbody>' +
+                        '</table>' +
+                        '</div>' +  //end content
+                        '<div class="map_img"><img  src="https://image.flaticon.com/icons/png/128/296/296842.png" ></div>' +
+
+                        '</div>' //end principal
+
+
+                });
+                google.maps.event.addListener(marker, "click", function (e) { iw.open(map, this); });
+
+            }
+
+        }
+        function log(h) {
+            document.getElementById("log").innerHTML += h + "<br />";
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
+
+    <!-- Map goes in the div below -->
+    <div id="googleMap"></div>
+    <div id="log"></div>
+
+</body>
+
+</html>

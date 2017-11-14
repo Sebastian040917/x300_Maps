@@ -1,0 +1,193 @@
+#googleMap {  width: 100%; height: 400px; top: 0px; left: 0; right: 0; bottom: 0; }        
+
+
+ /*style the box with content*/  
+.gm-style {
+   /* //max-width:230px; */
+}
+ .gm-style .gm-style-iw {
+    /* //background-color: #3C61AD !important; */
+    top:83px !important; /* +- */
+    width: 100% !important;
+   height:160px !important;
+   
+    min-height: 100px !important;
+    /* //padding-top: 10px; */
+    display: block !important;
+   border-radius:10px;
+   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+   font-size:10px !important;
+    
+ }    
+
+ /*style the p tag*/
+ .gm-style .gm-style-iw #google-popup p{
+    padding: 1px !important;   
+  
+ }
+
+  .gm-style .gm-style-iw #google-popup .subtitle{
+    font-weight:bold;
+ }
+ .gm-style .gm-style-iw #google-popup #title{
+    color: rgba(9, 103, 148, 0.78);
+    background-color: rgba(72, 181, 233, 0.35);
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;  
+   
+ }
+
+.gm-style .gm-style-iw #google-popup #content{
+  padding-top: 10px;
+  border-top-color: rgba(9, 103, 148, 0.78);
+  border-top-style: solid;
+  border-top-width: 2px;
+ }
+
+.map_img{           
+    text-align:center
+ }
+.map_img img{           
+    width:30px;
+    margin-left:4px !important;
+ }
+
+
+/*style the content*/
+.gm-style div div div div div div div div {
+    /* //background-color: #3C61AD !important; */
+    padding: 0;
+    margin: 0;
+    padding: 0px;
+  
+}
+
+/*style the link*/
+.gm-style div div div div div div div div a {
+    color: #f1f1f1;
+    font-weight: bold;
+}
+/*
+===================================
+*/       
+.labels {
+ color: white;
+ font-family: "Lucida Grande", "Arial", sans-serif;
+ font-size: 10px;
+ text-align: center;
+ width: 40px;
+ white-space: nowrap;
+}
+    
+/*
+===================================
+*/
+.gm-style > div:first-child > div div:first-child
+{
+display: block !important;
+}
+
+
+/* white background and box outline */
+.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div
+{
+/* //background-color: red !important;
+// opacity:0.5; */
+box-shadow: none !important;
+/* //width: auto !important;
+//height: auto !important; */
+border-radius:10px !important;
+/*//width: 100% !important;
+//position:relative;
+ //display: block !important; */
+top:83px !important;
+width:130px !important;
+height: 140px !important;
+}
+/* shadow background and box outline */
+.gm-style > div:first-child > div + div > div:last-child > div > div
+{
+width:131px !important;
+height: 160px !important;
+left:25px !important;
+/* //top:40px !important; */
+}
+
+/* section arrow*/
+.gm-style div:first-child> div> div > div> div:first-child div div div:first-child {
+display:none !important;   
+}
+
+/*replacer image*/
+.gm-style  > div:first-child >  div + div > div:last-child > div > div:first-child > div:first-child
+{
+/* //position: absolute !important; */
+/* //height: 30px !important; */
+width: 36px !important;
+background-repeat: no-repeat !important;
+background-size: 30px 30px !important;
+background-position-x: -8px;
+background-position-y: -24px;
+/* //background-image: url(https://image.flaticon.com/icons/png/128/296/296842.png) !important; */
+z-index: 1;   
+border-top: 23px solid transparent !important;
+/*box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px; */
+top: 205px !important; /* +- */
+left: 50px !important;
+/* //opacity:1; */
+} 
+
+
+/* close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
+{
+margin-right: 5px;
+margin-top: 68px; /* +- */
+/* //background:red; */
+height:150px !important;
+}
+
+/* image icon inside close button */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img
+{
+display: none;
+}
+
+
+/*
+===================================
+*/
+
+.close {
+/* //background: teal; */
+width: 30px;
+/* //height: 30px; */
+position: relative;
+}
+.close:after {
+content: '';
+height: 15px;
+border-left: 1px solid #0c0c0c;
+position: absolute;
+transform: rotate(45deg);
+left: 13px;
+top:-0px;
+}
+
+.close:before {
+content: '';
+height: 15px;
+border-left: 1px solid #0c0c0c;
+position: absolute;
+transform: rotate(-45deg);
+left: 13px;
+top:-0px;
+}
+
+.table-condensed>tbody>tr>td {
+/* //border-collapse: separate; */
+border-spacing:1px;
+padding-bottom: 0px;
+padding-top: 1px;
+}
