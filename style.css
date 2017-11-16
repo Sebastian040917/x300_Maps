@@ -1,24 +1,27 @@
 #googleMap {  width: 100%; height: 400px; top: 0px; left: 0; right: 0; bottom: 0; }        
 
+/*
+========== inside image =========================
+*/
+.map_img{           
+    text-align:center
+ }
+.map_img img{           
+    width:30px;
+    margin-left:3px !important;
+ }
 
- /*style the box with content*/  
-
- .gm-style .gm-style-iw {
+/*
+========== content =========================
+*/
+.gm-style div div div div div div div div {
     /* //background-color: #3C61AD !important; */
-    top:72px !important; /* +- */
-    width: 100% !important;
-   /* //height:100% !important; */
-   
-    min-height: 100px !important;
-    /* //padding-top: 10px; */
-    display: block !important;
-   border-radius:10px;
-   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-   font-size:10px !important;
-    
- }    
+    padding: 0;
+    margin: 0;
+    padding: 0px;
+  
+}
 
- /*style the p tag*/
  .gm-style .gm-style-iw #google-popup p{
     padding: 1px !important;   
   
@@ -32,8 +35,7 @@
     background-color: rgba(72, 181, 233, 0.35);
     padding: 10px;
     text-align: center;
-    font-weight: bold;  
-   
+    font-weight: bold;    
  }
 
 .gm-style .gm-style-iw #google-popup #content{
@@ -44,31 +46,13 @@
   min-height: 145px !important;
  }
 
-.map_img{           
-    text-align:center
- }
-.map_img img{           
-    width:30px;
-    margin-left:3px !important;
- }
-
-
-/*style the content*/
-.gm-style div div div div div div div div {
-    /* //background-color: #3C61AD !important; */
-    padding: 0;
-    margin: 0;
-    padding: 0px;
-  
-}
-
 /*style the link*/
 .gm-style div div div div div div div div a {
     color: #f1f1f1;
     font-weight: bold;
 }
 /*
-===================================
+============== label =====================
 */       
 .labels {
  color: white;
@@ -80,32 +64,66 @@
 }
     
 /*
-===================================
+==============aplied to content =====================
 */
 .gm-style > div:first-child > div div:first-child
 {
 display: block !important;
 }
 
+/*
+========== box with content =========================
+*/
+ .gm-style .gm-style-iw {
+    /* //background-color: #3C61AD !important; */    
+    width: 100% !important;
+   /* //height:100% !important; */
+   
+    min-height: 100px !important;
+    /* //padding-top: 10px; */
+    display: block !important;
+   border-radius:10px;
+   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+   font-size:10px !important;   
+   
+   /*req image*/
+  top:69px !important;
+   
+   /*opt image
+ top:72px !important;*/
+  
+  
+ }  
 
-/* white background and box outline */
+/*
+========== box outline =========================
+*/
 .gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div
 {
-/* //background-color: red !important;
-// opacity:0.5; */
+/* //background-color: red !important;*/
+ opacity:0.8; 
 box-shadow: none !important;
-/* //width: auto !important;
-//height: auto !important; */
 border-radius:10px !important;
-/*//width: 100% !important;
-//position:relative;
- //display: block !important; */
-top:73px !important;
+
+
 width:130px !important;
-/* //max-height: 174px !important; */
-height: 197px !important;
+
+  
+  /*req image*/
+  top:69px !important;
+  height: 211px !important;
+  
+  /*opt image 
+ top:72px !important;
+  height: 218px !important;*/
+  
+ 
+  
 }
-/* shadow background and box outline */
+
+/*
+==========shadow box outline =========================
+*/
 .gm-style > div:first-child > div + div > div:last-child > div > div
 {
 width:131px !important;
@@ -113,13 +131,15 @@ width:131px !important;
 left:25px !important;
 /* //top:40px !important; */
 }
-
-/* section arrow*/
+/*
+========== section arrow =========================
+*/
 .gm-style div:first-child> div> div > div> div:first-child div div div:first-child {
 display:none !important;   
 }
-
-/*replacer image*/
+/*
+========== replacer image =========================
+*/
 .gm-style  > div:first-child >  div + div > div:last-child > div > div:first-child > div:first-child
 {
 /* //position: absolute !important; */
@@ -138,8 +158,9 @@ left: 50px !important;
 /* //opacity:1; */
 } 
 
-
-/* close button */
+/*
+========== old close button =========================
+*/
 .gm-style > div:first-child > div + div > div:last-child > div > div:last-child
 {
 margin-right: 5px;
@@ -147,17 +168,24 @@ margin-top: 68px; /* +- */
 /* //background:red; */
 height:150px !important;
 }
-
-/* image icon inside close button */
+/*
+========== old image close button  =========================
+*/
 .gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img
 {
 display: none;
 }
 
-
 /*
-===================================
+==========new close button =========================
 */
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
+{
+margin-right: 5px;
+margin-top: 68px; /* +- */
+/* //background:red; */
+height:150px !important;
+}
 
 .close {
 /* //background: teal; */
@@ -184,7 +212,16 @@ transform: rotate(-45deg);
 left: 13px;
 top:-0px;
 }
-
+/*
+========== table =========================
+*/
+.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
+{
+margin-right: 5px;
+margin-top: 68px; /* +- */
+/* //background:red; */
+height:150px !important;
+}
 .table-condensed>tbody>tr>td {
 /* //border-collapse: separate; */
 border-spacing:1px;
