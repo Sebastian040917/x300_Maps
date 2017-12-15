@@ -1,230 +1,260 @@
-#googleMap {  width: 100%; height: 400px; top: 0px; left: 0; right: 0; bottom: 0; }        
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+div#googleMap {
+    height: 100%;
+}
+
 
 /*
 ========== inside image =========================
 */
-.map_img{           
-    text-align:center
- }
-.map_img img{           
-    width:30px;
-    margin-left:3px !important;
- }
+
+.map_img {
+    text-align: center
+}
+
+.map_img img {
+    width: 30px;
+    margin-left: 3px !important;
+}
+
 
 /*
 ========== content =========================
 */
+
 .gm-style div div div div div div div div {
     /* //background-color: #3C61AD !important; */
     padding: 0;
     margin: 0;
     padding: 0px;
-  
 }
 
- .gm-style .gm-style-iw #google-popup p{
-    padding: 1px !important;   
-  
- }
+.gm-style .gm-style-iw #google-popup p {
+    padding: 1px !important;
+}
 
-  .gm-style .gm-style-iw #google-popup .subtitle{
-    font-weight:bold;
- }
- .gm-style .gm-style-iw #google-popup #title{
+.gm-style .gm-style-iw #google-popup .subtitle {
+    font-weight: bold;
+}
+
+.gm-style .gm-style-iw #google-popup #title {
     color: rgba(9, 103, 148, 0.78);
     background-color: rgba(72, 181, 233, 0.35);
     padding: 10px;
     text-align: center;
-    font-weight: bold;    
- }
+    font-weight: bold;
+}
 
-.gm-style .gm-style-iw #google-popup #content{
-  padding-top: 10px;
-  border-top-color: rgba(9, 103, 148, 0.78);
-  border-top-style: solid;
-  border-top-width: 2px;
-  min-height: 145px !important;
- }
+.gm-style .gm-style-iw #google-popup #content {
+    padding-top: 10px;
+    border-top-color: rgba(9, 103, 148, 0.78);
+    border-top-style: solid;
+    border-top-width: 2px;
+    min-height: 145px !important;
+}
+
 
 /*style the link*/
+
 .gm-style div div div div div div div div a {
     color: #f1f1f1;
     font-weight: bold;
 }
+
+
 /*
 ============== label =====================
-*/       
+*/
+
 .labels {
- color: white;
- font-family: "Lucida Grande", "Arial", sans-serif;
- font-size: 10px;
- text-align: center;
- width: 40px;
- white-space: nowrap;
+    color: white;
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 10px;
+    text-align: center;
+    width: 40px;
+    white-space: nowrap;
 }
-    
+
+
 /*
 ==============aplied to content =====================
 */
-.gm-style > div:first-child > div div:first-child
-{
-display: block !important;
+
+.gm-style>div:first-child>div div:first-child {
+    display: block !important;
 }
+
 
 /*
 ========== box with content =========================
 */
- .gm-style .gm-style-iw {
-    /* //background-color: #3C61AD !important; */    
+
+.gm-style .gm-style-iw {
+    /* //background-color: #3C61AD !important; */
     width: 100% !important;
-   /* //height:100% !important; */
-   
+    /* //height:100% !important; */
     min-height: 100px !important;
     /* //padding-top: 10px; */
     display: block !important;
-   border-radius:10px;
-   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
-   font-size:10px !important;   
-   
-   /*req image*/
-  top:69px !important;
-   
-   /*opt image
- top:72px !important;*/
-  
-  
- }  
+    border-radius: 10px;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-size: 10px !important;
+    /*req image*/
+    top: 69px !important;
+    /*opt image
+top:72px !important;*/
+}
+
 
 /*
 ========== box outline =========================
 */
-.gm-style > div:first-child > div + div > div:last-child > div > div:first-child > div
-{
-/* //background-color: red !important;*/
- opacity:0.8; 
-box-shadow: none !important;
-border-radius:10px !important;
 
-
-width:130px !important;
-
-  
-  /*req image*/
-  top:69px !important;
-  height: 211px !important;
-  
-  /*opt image 
- top:72px !important;
-  height: 218px !important;*/
-  
- 
-  
+.gm-style>div:first-child>div+div>div:last-child>div>div:first-child>div {
+    /* //background-color: red !important;*/
+    opacity: 0.8;
+    box-shadow: none !important;
+    border-radius: 10px !important;
+    width: 130px !important;
+    /*req image*/
+    top: 69px !important;
+    height: 211px !important;
+    /*opt image 
+top:72px !important;
+height: 218px !important;*/
 }
+
 
 /*
 ==========shadow box outline =========================
 */
-.gm-style > div:first-child > div + div > div:last-child > div > div
-{
-width:131px !important;
-/* //height: 194px !important; */
-left:25px !important;
-/* //top:40px !important; */
+
+.gm-style>div:first-child>div+div>div:last-child>div>div {
+    width: 131px !important;
+    /* //height: 194px !important; */
+    left: 25px !important;
+    /* //top:40px !important; */
 }
+
+
 /*
 ========== section arrow =========================
 */
-.gm-style div:first-child> div> div > div> div:first-child div div div:first-child {
-display:none !important;   
+
+.gm-style div:first-child>div>div>div>div:first-child div div div:first-child {
+    display: none !important;
 }
+
+
 /*
 ========== replacer image =========================
 */
-.gm-style  > div:first-child >  div + div > div:last-child > div > div:first-child > div:first-child
-{
-/* //position: absolute !important; */
-/* //height: 30px !important; */
-width: 36px !important;
-background-repeat: no-repeat !important;
-background-size: 30px 30px !important;
-background-position-x: -8px;
-background-position-y: -24px;
-/* //background-image: url(https://image.flaticon.com/icons/png/128/296/296842.png) !important; */
-z-index: 1;   
-border-top: 23px solid transparent !important;
-/*box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px; */
-top: 205px !important; /* +- */
-left: 50px !important;
-/* //opacity:1; */
-} 
+
+.gm-style>div:first-child>div+div>div:last-child>div>div:first-child>div:first-child {
+    /* //position: absolute !important; */
+    /* //height: 30px !important; */
+    width: 36px !important;
+    background-repeat: no-repeat !important;
+    background-size: 30px 30px !important;
+    background-position-x: -8px;
+    background-position-y: -24px;
+    /* //background-image: url(https://image.flaticon.com/icons/png/128/296/296842.png) !important; */
+    z-index: 1;
+    border-top: 23px solid transparent !important;
+    /*box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 6px; */
+    top: 205px !important;
+    /* +- */
+    left: 50px !important;
+    /* //opacity:1; */
+}
+
 
 /*
 ========== old close button =========================
 */
-.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
-{
-margin-right: 5px;
-margin-top: 68px; /* +- */
-/* //background:red; */
-height:150px !important;
+
+.gm-style>div:first-child>div+div>div:last-child>div>div:last-child {
+    margin-right: 5px;
+    margin-top: 68px;
+    /* +- */
+    /* //background:red; */
+    height: 150px !important;
 }
+
+
 /*
 ========== old image close button  =========================
 */
-.gm-style > div:first-child > div + div > div:last-child > div > div:last-child > img
-{
-display: none;
+
+.gm-style>div:first-child>div+div>div:last-child>div>div:last-child>img {
+    display: none;
 }
+
 
 /*
 ==========new close button =========================
 */
-.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
-{
-margin-right: 5px;
-margin-top: 68px; /* +- */
-/* //background:red; */
-height:150px !important;
+
+.gm-style>div:first-child>div+div>div:last-child>div>div:last-child {
+    margin-right: 5px;
+    margin-top: 68px;
+    /* +- */
+    /* //background:red; */
+    height: 150px !important;
 }
 
 .close {
-/* //background: teal; */
-width: 30px;
-/* //height: 30px; */
-position: relative;
+    /* //background: teal; */
+    width: 30px;
+    /* //height: 30px; */
+    position: relative;
 }
+
 .close:after {
-content: '';
-height: 15px;
-border-left: 1px solid #0c0c0c;
-position: absolute;
-transform: rotate(45deg);
-left: 13px;
-top:-0px;
+    content: '';
+    height: 15px;
+    border-left: 1px solid #0c0c0c;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 13px;
+    top: -0px;
 }
 
 .close:before {
-content: '';
-height: 15px;
-border-left: 1px solid #0c0c0c;
-position: absolute;
-transform: rotate(-45deg);
-left: 13px;
-top:-0px;
+    content: '';
+    height: 15px;
+    border-left: 1px solid #0c0c0c;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 13px;
+    top: -0px;
 }
+
+
 /*
 ========== table =========================
 */
-.gm-style > div:first-child > div + div > div:last-child > div > div:last-child
-{
-margin-right: 5px;
-margin-top: 68px; /* +- */
-/* //background:red; */
-height:150px !important;
+
+.gm-style>div:first-child>div+div>div:last-child>div>div:last-child {
+    margin-right: 5px;
+    margin-top: 68px;
+    /* +- */
+    /* //background:red; */
+    height: 150px !important;
 }
+
 .table-condensed>tbody>tr>td {
-/* //border-collapse: separate; */
-border-spacing:1px;
-padding-bottom: 0px;
-padding-top: 4px;
+    /* //border-collapse: separate; */
+    border-spacing: 1px;
+    padding-bottom: 0px;
+    padding-top: 4px;
 }
